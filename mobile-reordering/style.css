@@ -64,13 +64,79 @@ section, footer {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+.flex-nav .social {
+  flex: 1;
 }
 
 @media all and (max-width:1000px) {
+  .flex-nav li {
+    flex-basis: 50%;
+  }
 
+  .flex-nav .social {
+    flex-basis: 25%;
+  }
 }
 
 
 @media all and (max-width:500px) {
+  .flex-nav li {
+    flex-basis: 100%;
+  }
+
+  .flex-nav .social {
+    flex-basis: 25%;
+  }  
   
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .flex-nav {
+    order: -1;
+  }
+
+  .top {
+    order: 0;
+  }
+
+  .details {
+    order: 1;
+  }
+
+  .signup {
+    order: 2;
+  }
+  
+  .hero {
+    order: 3;
+  }
+
+  footer {
+    order: 4;
+  }
+
+  .toggleNav {
+    display: block;
+    order: -1;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+
+
+  .flex-nav .open {
+    display: flex;
+  }
 }
